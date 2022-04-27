@@ -91,9 +91,7 @@ a:hover {
   transition: 100ms;
   color: rgb(248, 0, 114);
 }
-main {
-  position: relative;
-}
+
 .signup-form {
   width: 60%;
   background-color: rgb(240, 240, 240);
@@ -108,12 +106,12 @@ main {
 form {
   grid-row: 2 / span 2;
 }
-
 .form-container {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   padding-left: 3rem;
-  padding-right: 10rem;
+  padding-right: 250px;
   height: 400px;
   background-color: white;
   box-shadow: 0px 0px 20px 3px rgb(248, 0, 114, 0.7);
@@ -122,6 +120,10 @@ form {
   padding-top: 2rem;
   padding-bottom: 2rem;
   font-size: 1.5rem;
+}
+
+.form-container:last-child {
+  color: blue;
 }
 
 #submit-btn {
@@ -167,6 +169,7 @@ main > div > p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
   width: 250px;
 }
 .input-field > label {
@@ -175,8 +178,21 @@ main > div > p {
 
 input {
   padding-left: 5px;
-  display: inline-block;
-  height: 25px;
+  height: 30px;
   border-radius: 5px;
-  border: 1px solid rgba(248, 0, 114, 0.3);
+  border: 1px solid rgba(248, 0, 114, 0.2);
+}
+
+input:focus {
+  outline: 1px solid rgba(248, 0, 114, 0.5);
+}
+.input-error input {
+  outline: 1px solid red;
+}
+.input-error > label::after {
+  position: absolute;
+  top: 55px;
+  left: 0px;
+  content: "* passwords do not match";
+  color: red;
 }

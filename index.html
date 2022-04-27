@@ -36,24 +36,42 @@
             cosmic tunes to vibe with. Sign up now to float the cosmic ocean and
             vibe with us. Sign up <em>now</em> to get started.
           </p>
-
           <p>You <em>know</em> you want to.</p>
         </div>
         <form action="/" method="post">
           <div class="form-container">
-            <h3>Let's do this!</h3>
+            <h3 style="grid-column: 1 / span 2">Let's do this!</h3>
             <div class="form-layout">
               <div class="input-field">
                 <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name" />
+                <input type="text" id="first-name" name="first-name" required />
               </div>
               <div class="input-field">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" />
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div id="pass-field" class="input-field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+              </div>
+            </div>
+            <div class="form-layout">
+              <div class="input-field">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required />
               </div>
               <div class="input-field">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" />
+                <label for="phone">Phone</label>
+                <input type="phone" id="phone" name="phone" />
+              </div>
+              <div class="input-field">
+                <label for="confirm-password">Confirm Password</label>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirm-password"
+                  required
+                />
               </div>
             </div>
           </div>
