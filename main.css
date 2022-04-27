@@ -163,9 +163,20 @@ main > div > p {
 
 .input-field {
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 250px;
+}
+.input-field > label {
+  padding-bottom: 5px;
+}
+
+input {
+  padding-left: 5px;
+  display: inline-block;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid rgba(248, 0, 114, 0.3);
 }
